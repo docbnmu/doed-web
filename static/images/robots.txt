@@ -1,0 +1,4 @@
+user-agent: *
+disallow: /*.pdf
+
+sitemap: https://docbnmu.in/sitemap.xml
