@@ -5,6 +5,5 @@
     { "src": "/(.*)", "dest": "/$1" },
     { "handle": "filesystem" },
     { "src": "/.*", "status": 404, "dest": "/404" }
-  ],
-   "regions": ["bom", "sin"]
+  ]
 }
