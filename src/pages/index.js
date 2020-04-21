@@ -1,6 +1,5 @@
 import React from "react"
-import Alert from "react-bootstrap/Alert"
-import Button from "react-bootstrap/Button"
+import NoticeBoard from "./post-notice"
 import { Container } from "react-bootstrap"
 import Carousel from "react-bootstrap/Carousel"
 import Layout from "../components/layout"
@@ -32,26 +31,7 @@ const IndexPage = () => (
     </hr>
     <br></br>
     <br></br>
-    <h1>Notice.</h1>
-    <hr></hr>
-    <br></br>
-    <div>
-      <Alert variant="success">
-        <Alert.Heading>
-        List of admitted students in B.Ed.
-        </Alert.Heading>
-        <p>20.03.2020 — B.Ed.</p>
-        <hr />
-        <p className="mb-0">
-          <a href="../documents/Admitted.Students.in.B.Ed.pdf">
-            <Button variant="outline-dark" size="lg" block>
-              Download list
-            </Button>
-          </a>
-        </p>
-      </Alert>
-    </div>
-    <hr></hr>
+    <NoticeBoard />
   </Layout>
 )
 export default IndexPage

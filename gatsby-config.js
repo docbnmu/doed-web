@@ -53,6 +53,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-build-date`,
+      options: {
+        formatting: {
+          format: `dddd, MMM D, YYYY HH:mm:s Z`,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `University Department of Education`,
@@ -62,23 +70,6 @@ module.exports = {
         background_color: `#20232a`,
         theme_color: `#20232a`,
         display: `minimal-ui`,
-      },
-    },
-    { 
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true, // Print removed selectors and processed file names
-        // develop: true, // Enable while using `gatsby develop`
-        // tailwind: true, // Enable tailwindcss support
-        // whitelist: ['whitelist'], // Don't remove this selector
-        ignore: ['src/pages/'], // Ignore files/folders
-        purgeOnly : ['components/', '/main.css', 'node_modules/bootstrap'], // Purge only these files/folders
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-zopfli',
-      options: {
-        extensions: ['css', 'html', 'js', 'svg']
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
