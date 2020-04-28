@@ -1,7 +1,6 @@
 import React from "react"
 import NoticeBoard from "./post-notice"
-import { Container } from "react-bootstrap"
-import Carousel from "react-bootstrap/Carousel"
+import { Container, Carousel } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ImgA from "../images/gallery/IMG-20190709-WA0106.jpg"
@@ -27,8 +26,7 @@ const IndexPage = () => (
         </Carousel.Item>
       </Carousel>
     </Container>
-    <hr>
-    </hr>
+    <hr></hr>
     <br></br>
     <br></br>
     <NoticeBoard />

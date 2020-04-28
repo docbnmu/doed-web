@@ -1,11 +1,7 @@
 import React from "react"
-import Accordion from "react-bootstrap/Accordion"
-import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
+import { Accordion, Card, Button, Badge } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Badge from 'react-bootstrap/Badge'
-
 
 const Syllabus = () => (
   <Layout pageInfo={{ pageName: "Syllabus" }}>
@@ -49,7 +45,8 @@ const Syllabus = () => (
       </Accordion>
     </div>
     <hr></hr>
-    <br></br><br></br>
+    <br></br>
+    <br></br>
   </Layout>
 )
 

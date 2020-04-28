@@ -1,6 +1,5 @@
 import React from "react"
-import Alert from "react-bootstrap/Alert"
-import Button from "react-bootstrap/Button"
+import { Alert, Button } from "react-bootstrap"
 import Date from "../components/date"
 
 const NoticeBoard = () => (
@@ -10,9 +9,7 @@ const NoticeBoard = () => (
     <br></br>
     <div>
       <Alert variant="success">
-        <Alert.Heading>
-        List of admitted students in B.Ed.
-        </Alert.Heading>
+        <Alert.Heading>List of admitted students in B.Ed.</Alert.Heading>
         <p>20.03.2020 — B.Ed.</p>
         <hr />
         <p className="mb-0">
@@ -26,8 +23,7 @@ const NoticeBoard = () => (
     </div>
     <hr></hr>
 
-
-<Date />
+    <Date />
   </>
 )
 export default NoticeBoard

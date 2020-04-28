@@ -25,44 +25,32 @@ const Faculty = () => (
           <tr>
             <td>Dr. Lalan Prakash Sahni</td>
             <td>Head</td>
-            <td>
-            9386606265
-            </td>
+            <td>9386606265</td>
           </tr>
           <tr>
             <td>Dr. Pavan Kumar</td>
             <td>Assistant Professor</td>
-            <td>
-              -
-            </td>
+            <td>-</td>
           </tr>
           <tr>
             <td>Mr. Rovins Kumar</td>
             <td>Assistant Professor</td>
-            <td>
-              -
-            </td>
+            <td>-</td>
           </tr>
           <tr>
             <td>Mrs. Ruchi Suman</td>
             <td>Assistant Professor</td>
-            <td>
-             -
-            </td>
+            <td>-</td>
           </tr>
           <tr>
             <td>Mr. Ram Singh Yadav</td>
             <td>Assistant Professor</td>
-            <td>
-              -
-            </td>
+            <td>-</td>
           </tr>
           <tr>
             <td>Mr. Beer Bahadur</td>
             <td>Assistant Professor</td>
-            <td>
-              -
-            </td>
+            <td>-</td>
           </tr>
         </tbody>
       </Table>
@@ -75,9 +63,15 @@ const Faculty = () => (
       <Table striped bordered hover responsive>
         <thead>
           <tr>
-            <th><b>Name</b></th>
-            <th><b>Designation</b></th>
-            <th><b>Contact</b></th>
+            <th>
+              <b>Name</b>
+            </th>
+            <th>
+              <b>Designation</b>
+            </th>
+            <th>
+              <b>Contact</b>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -88,12 +82,12 @@ const Faculty = () => (
           </tr>
           <tr>
             <td>Dr. Shivendra Prasad Singh</td>
-            <td>Associate Professor	</td>
+            <td>Associate Professor </td>
             <td>-</td>
           </tr>
           <tr>
             <td>Mr. Firoz Ahmed Mansuri</td>
-            <td>Associate Professor	</td>
+            <td>Associate Professor </td>
             <td>-</td>
           </tr>
         </tbody>
@@ -107,9 +101,15 @@ const Faculty = () => (
       <Table striped bordered hover responsive>
         <thead>
           <tr>
-            <th><b>Name</b></th>
-            <th><b>Designation</b></th>
-            <th><b>Contact</b></th>
+            <th>
+              <b>Name</b>
+            </th>
+            <th>
+              <b>Designation</b>
+            </th>
+            <th>
+              <b>Contact</b>
+            </th>
           </tr>
         </thead>
         <tbody>
