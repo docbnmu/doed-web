@@ -15,9 +15,9 @@ const CustomNavbar = ({ pageInfo }) => {
               <img
                 class="img-fluid lazy"
                 src={logo}
-                width="40"
-                height="40"
-                alt="&#8962;"
+                width="80"
+                height="80"
+                alt="Home"
               ></img>
             </Navbar.Brand>
           </Link>
