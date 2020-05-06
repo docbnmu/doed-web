@@ -4,11 +4,11 @@ import ThumbGrid from "./thumbnails"
 import LightBox from "./lightbox"
 import { Grid } from "@material-ui/core"
 
-const GalleryComponent = props => {
+const GalleryComponent = (props) => {
   const [showLightbox, setShowLightbox] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
 
-  const handleOpen = i => e => {
+  const handleOpen = (i) => (e) => {
     setShowLightbox(true)
     setSelectedImage(i)
   }
@@ -16,10 +16,10 @@ const GalleryComponent = props => {
     setShowLightbox(false)
     setSelectedImage(null)
   }
-  const handlePrevRequest = (i, length) => e => {
+  const handlePrevRequest = (i, length) => (e) => {
     setSelectedImage((i - 1 + length) % length)
   }
-  const handleNextRequest = (i, length) => e => {
+  const handleNextRequest = (i, length) => (e) => {
     setSelectedImage((i + 1) % length)
   }
   return (
@@ -40,7 +40,7 @@ const GalleryComponent = props => {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const images = data.source.edges
         return (
           <Grid container spacing={1} justify="center">

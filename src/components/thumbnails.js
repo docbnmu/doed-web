@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import { withStyles, ButtonBase, Grid } from "@material-ui/core"
 
-const style = theme => ({
+const style = (theme) => ({
   previewButton: {
     display: "inline-block",
     background: "transparent",

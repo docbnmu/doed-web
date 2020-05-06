@@ -9,10 +9,7 @@ import ImgC from "../images/gallery/IMG-20190905-WA0225.jpg"
 
 const IndexPage = () => (
   <Layout pageInfo={{ pageName: "Home" }}>
-    <SEO
-      title="Home - University Department of Education"
-      keywords={[`doedbnmu`, `bnmu`, `madhepura`]}
-    />
+    <SEO title="Home" keywords={[`doedbnmu`, `bnmu`, `madhepura`]} />
     <Container>
       <Carousel>
         <Carousel.Item>
