@@ -4,12 +4,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-
 import { Container, Row, Col } from "react-bootstrap"
-
 import Header from "./header"
 import Navbar from "./navBar"
 
@@ -49,10 +46,12 @@ const Layout = ({ children, pageInfo, data }) => (
             <Col className="footer-col justify-content-center">
               <footer>
                 <span>
-                  <h5>
-                    University's website: bnmu.ac.in &bull; Laloo Nagar,
-                    Madhepura (852113) Bihar.
-                  </h5>
+                  <section>
+                    <h5>
+                      University's website: bnmu.ac.in &bull; Laloo Nagar,
+                      Madhepura (852113) Bihar.
+                    </h5>
+                  </section>
                 </span>
               </footer>
             </Col>

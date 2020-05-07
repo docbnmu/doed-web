@@ -10,7 +10,7 @@ const Date = () => {
     }
   `)
 
-  return <h6>Last updated: {data.currentBuildDate.currentDate}</h6>
+  return <p>Last updated: {data.currentBuildDate.currentDate}</p>
 }
 
 export default Date
