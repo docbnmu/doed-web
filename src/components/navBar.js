@@ -21,10 +21,10 @@ const CustomNavbar = ({ pageInfo }) => {
               ></img>
             </Navbar.Brand>
           </Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
             className="justify-content-center"
-            id="basic-navbar-nav"
+            id="responsive-navbar-nav"
           >
             <Nav
               className="justify-content-center"

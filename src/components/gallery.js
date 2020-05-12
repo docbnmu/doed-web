@@ -1,63 +1,87 @@
-import React, { useState } from "react"
-import { graphql, StaticQuery } from "gatsby"
-import ThumbGrid from "./thumbnails"
-import LightBox from "./lightbox"
-import { Grid } from "@material-ui/core"
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import Lightbox from "react-image-lightbox"
+import "react-image-lightbox/style.css"
+class LightboxPage extends React.Component {
+  state = {
+    photoIndex: 0,
+    isOpen: false,
+    images: [
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0105.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0110.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0116.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20200114-WA0004.jpg",
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0106.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0111.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190905-WA0225.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20200126-WA0056.jpg",
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0107.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0113.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190905-WA0266.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20200126-WA0057.jpg",
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0108.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0114.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20191025-WA0188.jpg",
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0109.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0115.jpg", 
+    "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20200113-WA0038.jpg",
+    ],
+  }
 
-const GalleryComponent = (props) => {
-  const [showLightbox, setShowLightbox] = useState(false)
-  const [selectedImage, setSelectedImage] = useState(null)
+  renderImages = () => {
+    let photoIndex = -1
+    const { images } = this.state
 
-  const handleOpen = (i) => (e) => {
-    setShowLightbox(true)
-    setSelectedImage(i)
-  }
-  const handleClose = () => {
-    setShowLightbox(false)
-    setSelectedImage(null)
-  }
-  const handlePrevRequest = (i, length) => (e) => {
-    setSelectedImage((i - 1 + length) % length)
-  }
-  const handleNextRequest = (i, length) => (e) => {
-    setSelectedImage((i + 1) % length)
-  }
-  return (
-    <StaticQuery
-      query={graphql`
-        query allImgQuery {
-          source: allFile(filter: { absolutePath: { regex: "/gallery/" } }) {
-            edges {
-              node {
-                childImageSharp {
-                  fluid(maxHeight: 600) {
-                    ...GatsbyImageSharpFluid_noBase64
-                    presentationWidth
-                  }
-                }
+    return images.map((imageSrc) => {
+      photoIndex++
+      const privateKey = photoIndex
+      return (
+        <Col md="4" className="inline-flex" key={photoIndex}>
+          <figure>
+            <img
+              src={imageSrc}
+              alt="#"
+              loading="lazy"
+              className="lazy img-fluid rounded-lg"
+              onClick={() =>
+                this.setState({ photoIndex: privateKey, isOpen: true })
               }
+            />
+          </figure>
+        </Col>
+      )
+    })
+  }
+
+  render() {
+    const { photoIndex, isOpen, images } = this.state
+    return (
+      <Container className="mt-5">
+        <div className="container-fluid">
+          <Row>{this.renderImages()}</Row>
+        </div>
+        {isOpen && (
+          <Lightbox
+            mainSrc={images[photoIndex]}
+            nextSrc={images[(photoIndex + 1) % images.length]}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            imageTitle={photoIndex + 1 + "/" + images.length}
+            onCloseRequest={() => this.setState({ isOpen: false })}
+            onMovePrevRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + images.length - 1) % images.length,
+              })
             }
-          }
-        }
-      `}
-      render={(data) => {
-        const images = data.source.edges
-        return (
-          <Grid container spacing={1} justify="center">
-            <ThumbGrid images={images} handleOpen={handleOpen} />
-            {showLightbox && selectedImage !== null && (
-              <LightBox
-                images={images}
-                handleClose={handleClose}
-                handleNextRequest={handleNextRequest}
-                handlePrevRequest={handlePrevRequest}
-                selectedImage={selectedImage}
-              />
-            )}
-          </Grid>
-        )
-      }}
-    />
-  )
+            onMoveNextRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + 1) % images.length,
+              })
+            }
+          />
+        )}
+      </Container>
+    )
+  }
 }
-export default GalleryComponent
+
+export default LightboxPage

@@ -3,9 +3,9 @@ import NoticeBoard from "./post-notice"
 import { Container, Carousel } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ImgA from "../images/gallery/IMG-20190709-WA0106.jpg"
-import ImgB from "../images/gallery/IMG-20190709-WA0110.jpg"
-import ImgC from "../images/gallery/IMG-20190905-WA0225.jpg"
+const ImgA = "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0106.jpg"
+const ImgB = "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190709-WA0110.jpg"
+const ImgC = "https://ik.imagekit.io/85x/https://doed.now.sh/images/gallery/IMG-20190905-WA0225.jpg"
 
 const IndexPage = () => (
   <Layout pageInfo={{ pageName: "Home" }}>
