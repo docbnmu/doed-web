@@ -7,16 +7,16 @@ const CustomNavbar = ({ pageInfo }) => {
   console.log(pageInfo)
   return (
     <>
-      <Navbar variant="dark" expand="md" id="site-navbar">
+      <Navbar collapseOnSelect expand="lg" variant="dark" id="site-navbar">
         {/* <Container> */}
-        <div class="container">
+        <div className="container">
           <Link to="/" className="link-no-style">
             <Navbar.Brand>
               <img
-                class="img-fluid lazy"
+                className="img-fluid lazy"
                 src={logo}
-                width="80"
-                height="80"
+                width="65"
+                height="65"
                 alt="Home"
               ></img>
             </Navbar.Brand>
@@ -26,10 +26,7 @@ const CustomNavbar = ({ pageInfo }) => {
             className="justify-content-center"
             id="responsive-navbar-nav"
           >
-            <Nav
-              className="justify-content-center"
-              activeKey={pageInfo && pageInfo.pageName}
-            >
+            <Nav className="mr-auto" activeKey={pageInfo && pageInfo.pageName}>
               <Link to="/about">
                 <Nav.Link as="span" eventKey="about">
                   <Button variant="secondary" active>
@@ -44,10 +41,31 @@ const CustomNavbar = ({ pageInfo }) => {
                   </Button>
                 </Nav.Link>
               </Link>
+              <Link to="/statistics">
+                <Nav.Link as="span" eventKey="Statistics">
+                  <Button variant="secondary" active>
+                    Statistics
+                  </Button>
+                </Nav.Link>
+              </Link>
               <Link to="/syllabus">
                 <Nav.Link as="span" eventKey="Syllabus">
                   <Button variant="secondary" active>
                     Syllabus
+                  </Button>
+                </Nav.Link>
+              </Link>
+              <Link to="/NAAC">
+                <Nav.Link as="span" eventKey="NAAC">
+                  <Button variant="secondary" active>
+                    NAAC
+                  </Button>
+                </Nav.Link>
+              </Link>
+              <Link to="/reading-material">
+                <Nav.Link as="span" eventKey="ReadingMaterial">
+                  <Button variant="secondary" active>
+                    Reading Material
                   </Button>
                 </Nav.Link>
               </Link>
@@ -75,3 +93,4 @@ const CustomNavbar = ({ pageInfo }) => {
 }
 
 export default CustomNavbar
+
