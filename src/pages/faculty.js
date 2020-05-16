@@ -81,7 +81,7 @@ const Faculty = () => (
             <td>7979903189</td>
           </tr>
           <tr>
-            <td>Dr. Shivendra Prasad Singh</td>
+            <td>Dr. Shivendra Pratap Singh</td>
             <td>Associate Professor </td>
             <td>-</td>
           </tr>
