@@ -21,7 +21,7 @@ const ReadingMaterial = () => (
       Sem I
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="i1">
-      <Card.Body>Hello! I'm the body</Card.Body>
+      <Card.Body>No content yet</Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card>
@@ -47,7 +47,7 @@ const ReadingMaterial = () => (
       Sem I
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="ii1">
-      <Card.Body>Hello! I'm the body</Card.Body>
+      <Card.Body>No content yet</Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card>
@@ -73,7 +73,7 @@ const ReadingMaterial = () => (
       Sem I
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
-      <Card.Body>Hello! I'm the body</Card.Body>
+      <Card.Body>No content yet</Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card>
@@ -99,7 +99,7 @@ const ReadingMaterial = () => (
       Sem I
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
-      <Card.Body>Hello! I'm the body</Card.Body>
+      <Card.Body>No content yet</Card.Body>
     </Accordion.Collapse>
   </Card>
   <Card>
