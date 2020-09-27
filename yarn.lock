@@ -6236,10 +6236,17 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
+<<<<<<< HEAD
 gatsby-cli@^2.12.46:
   version "2.12.46"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.46.tgz#1ae6783c5ed5df0678ccff39280463eb866550a7"
   integrity sha512-G8gvBbM7oV8OyJZ09zeTGz8mGbOgCNuhYGin32H40quDdibwvpcMY428QXHM9D3qh5HQQrTh1sHttQeNwh4fXw==
+=======
+gatsby-cli@^2.12.21:
+  version "2.12.21"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.21.tgz#a8c57af428aebdb7882954eaf4d844bd012905f7"
+  integrity sha512-kJNcgMnae5m2ySWY126LT0W+pghgkzgHqUxQpqg6QCaV7FW1k0Bkf7nhKAg0uZgy9NhUpN1wb/26VeQjNFMzAg==
+>>>>>>> origin/dependabot/npm_and_yarn/websocket-extensions-0.1.4
   dependencies:
     "@babel/code-frame" "^7.10.1"
     "@babel/runtime" "^7.10.2"
@@ -6256,9 +6263,15 @@ gatsby-cli@^2.12.46:
     execa "^3.4.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^8.1.0"
+<<<<<<< HEAD
     gatsby-core-utils "^1.3.5"
     gatsby-recipes "^0.1.40"
     gatsby-telemetry "^1.3.11"
+=======
+    gatsby-core-utils "^1.2.2"
+    gatsby-recipes "^0.1.19"
+    gatsby-telemetry "^1.3.4"
+>>>>>>> origin/dependabot/npm_and_yarn/websocket-extensions-0.1.4
     hosted-git-info "^3.0.4"
     ink "^2.7.1"
     ink-spinner "^3.0.1"
@@ -6450,6 +6463,7 @@ gatsby-react-router-scroll@^3.0.3:
     scroll-behavior "^0.9.12"
     warning "^3.0.0"
 
+<<<<<<< HEAD
 gatsby-recipes@^0.1.40:
   version "0.1.40"
   resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.1.40.tgz#902ec7f00a3889f59c9d9cf327c153204a17e227"
@@ -6463,6 +6477,18 @@ gatsby-recipes@^0.1.40:
     "@babel/template" "^7.10.1"
     "@babel/types" "^7.10.2"
     "@hapi/hoek" "8.x"
+=======
+gatsby-recipes@^0.1.19:
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.1.19.tgz#ac2634452c89253bd18d4f73face44db442b413d"
+  integrity sha512-N++VIje7M0N6zoShZMISyaIzMwbu9Lot7iyNDk6BblI466J8yQvceqj4uDIb9NzI6cQ82Px0yFGXapymsWGg9Q==
+  dependencies:
+    "@babel/core" "^7.9.6"
+    "@babel/generator" "^7.9.6"
+    "@babel/standalone" "^7.9.6"
+    "@babel/template" "^7.8.6"
+    "@babel/types" "^7.9.6"
+>>>>>>> origin/dependabot/npm_and_yarn/websocket-extensions-0.1.4
     "@hapi/joi" "^15.1.1"
     "@mdx-js/mdx" "^1.6.5"
     "@mdx-js/react" "^1.6.5"
@@ -6518,10 +6544,10 @@ gatsby-recipes@^0.1.40:
     ws "^7.3.0"
     xstate "^4.10.0"
 
-gatsby-source-filesystem@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.3.2.tgz#169cb8e755ee1b13f18068c9e4109f6a7e4cf3ce"
-  integrity sha512-IpN9pAiWuG6eXZSyXaqmgyTMWj1V94qNEehWbltlkqmEyb48PcNp+j1ACqZ+vTYX43CVl2g4O9RwscZPD5aimQ==
+gatsby-source-filesystem@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.3.3.tgz#16a7be93c577da11137654cd04d4bcf0c73c1867"
+  integrity sha512-RsA6xssBKEel2e0Rj1hQZRNtPQ1lOh2ZlpXZr3CpE3W52F8bSrGnIBnqkmp4aPmtDGYgcw3okid0UNhBmUeiuA==
   dependencies:
     "@babel/runtime" "^7.9.6"
     better-queue "^3.8.10"
@@ -6575,10 +6601,17 @@ gatsby-transformer-sharp@2.5.2:
     semver "^5.7.1"
     sharp "^0.25.1"
 
+<<<<<<< HEAD
 gatsby@latest:
   version "2.23.4"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.23.4.tgz#dc24b2181e5ea0897a00bf2ace5dafdaf705d378"
   integrity sha512-0r9THULMi7ntWUxEG6LhkfQBjP1AqSUXSHABvvMazmuD7DI79xe3uu5DniOxAkAhY/JKRXixEYwoCUakc5DdVA==
+=======
+gatsby@2.21.31:
+  version "2.21.31"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.21.31.tgz#dd8c71c224062307968a3eb508d1f19aad2e9dcd"
+  integrity sha512-eT3vr5xk99oo/aEjmQZVVi6ZPJ3VTUEgBNHeXbOqgx0LmpJUVnx5cBHxnilv9yGgmW4AW0piZtWti3yGVOP8Rg==
+>>>>>>> origin/dependabot/npm_and_yarn/websocket-extensions-0.1.4
   dependencies:
     "@babel/code-frame" "^7.10.1"
     "@babel/core" "^7.10.2"
@@ -6642,6 +6675,7 @@ gatsby@latest:
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
+<<<<<<< HEAD
     gatsby-cli "^2.12.46"
     gatsby-core-utils "^1.3.5"
     gatsby-graphiql-explorer "^0.4.5"
@@ -6650,6 +6684,16 @@ gatsby@latest:
     gatsby-plugin-typescript "^2.4.6"
     gatsby-react-router-scroll "^3.0.3"
     gatsby-telemetry "^1.3.11"
+=======
+    gatsby-cli "^2.12.21"
+    gatsby-core-utils "^1.2.2"
+    gatsby-graphiql-explorer "^0.4.1"
+    gatsby-link "^2.4.2"
+    gatsby-plugin-page-creator "^2.3.2"
+    gatsby-plugin-typescript "^2.4.2"
+    gatsby-react-router-scroll "^3.0.0"
+    gatsby-telemetry "^1.3.4"
+>>>>>>> origin/dependabot/npm_and_yarn/websocket-extensions-0.1.4
     glob "^7.1.6"
     got "8.3.2"
     graphql "^14.6.0"
@@ -9386,7 +9430,11 @@ minimist@^0.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.2.1.tgz#827ba4e7593464e7c221e8c5bed930904ee2c455"
   integrity sha512-GY8fANSrTMfBVfInqJAY41QkOM+upUTytK1jZ0c8+3HdHrJxBJ3rF5i9moClXTE8uUSnUo8cAsCoxDXvSY4DHg==
 
+<<<<<<< HEAD
 minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.3, minimist@^1.2.5:
+=======
+minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.5:
+>>>>>>> origin/dependabot/npm_and_yarn/websocket-extensions-0.1.4
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
@@ -14394,6 +14442,7 @@ websocket-extensions@>=0.1.1:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
   integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
+<<<<<<< HEAD
 
 websocket@1.0.31:
   version "1.0.31"
@@ -14405,6 +14454,8 @@ websocket@1.0.31:
     nan "^2.14.0"
     typedarray-to-buffer "^3.1.5"
     yaeti "^0.0.6"
+=======
+>>>>>>> origin/dependabot/npm_and_yarn/websocket-extensions-0.1.4
 
 whatwg-fetch@2.0.4:
   version "2.0.4"
