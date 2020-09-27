@@ -13,7 +13,9 @@ export default class AdmitCard extends React.Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.downloadFile = this.downloadFile.bind(this);
+
   }
+
 
   handleInputChange(event) {
     const target = event.target;
@@ -28,7 +30,7 @@ export default class AdmitCard extends React.Component {
   downloadFile = function(e) {
     e.preventDefault();
     this.setState({ showDownloading : true});
-    const filename = Buffer.from(this.state.formAlp + this.state.formNo).toString('base64');
+    const filename = Buffer.from(this.state.formAlp.toUpperCase() + this.state.formNo).toString('base64');
     var xhr = new XMLHttpRequest();
        
         var URLToPDF = "https://download.doedbnmu.in/Master/" + filename + ".pdf";
@@ -101,7 +103,7 @@ render() {
   </InputGroup.Prepend>
   <FormControl 
   type="text"
-  style={{textTransform: 'uppercase'}}
+  className="text-uppercase"
   placeholder="BHUPENDRA NARAYAN MANDAL"
   />
 </InputGroup>
@@ -113,9 +115,9 @@ render() {
       <Form.Control
     type="text"
     maxLength={1}
-    style={{textTransform: 'uppercase'}}
+    className="text-uppercase"
     id="form-alp1"
-    placeholder="X"
+    placeholder="Z"
     name="formAlp"
     required
     value={this.state.formAlp}
@@ -155,7 +157,7 @@ render() {
   <Alert variant="success">
   <Alert.Heading>Downloading...</Alert.Heading>
   <p>
-  MET 2020 Admit Card for {this.state.formAlp} - {this.state.formNo} <br /> 
+  MET 2020 Admit Card for {this.state.formAlp.toUpperCase()} - {this.state.formNo} <br /> 
   </p>
   <hr />
   <p className="mb-0">
