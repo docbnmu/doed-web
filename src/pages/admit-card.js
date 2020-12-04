@@ -70,7 +70,9 @@ render() {
       <hr />
       Candidates may enter their form number to download the admit card (example A-000) or they can get their admit card from the Education Department, B. N. Mandal University.
     </Card.Text>
-    
+    <Button href="../documents/MEd/MET2020-Instructions.pdf" variant="outline-dark">
+    Instructions for candidates <Badge variant="secondary">PDF</Badge>
+    </Button>
   </Card.Body>
   <Card.Footer>
   अभ्यर्थी अपना फॉर्म नंबर स्वीकृति पर्ची पर पा सकते हैं। उदाहरण:
@@ -80,12 +82,22 @@ render() {
   </Card.Footer>
 </Card>
 <hr />
+
 <h3>अपना फॉर्म नंबर यहां डालें | Enter your form number here:</h3> 
 <br />
 <Form>
   <Form.Row className="justify-content-md-center">
-    <Col sm={3} className="my-1" >
+  <InputGroup size="lg" className="mb-3">
+  <InputGroup.Prepend>
+    <InputGroup.Text>Full name</InputGroup.Text>
+  </InputGroup.Prepend>
+  <FormControl />
+</InputGroup>
+    <Col sm={4} className="my-1" >
     <InputGroup size="lg">
+    <InputGroup.Prepend>
+      <InputGroup.Text>Form No.</InputGroup.Text>
+    </InputGroup.Prepend>
       <Form.Control
     type="text"
     maxLength={1}
@@ -121,22 +133,22 @@ render() {
     <Col xs="auto" className="my-1">
       <Button size="lg" variant="dark" type="reset">Reset</Button>
     </Col>
-  </Form.Row>
-</Form>
-<hr />
+
 {
         this.state.submitClicked?
     <Col xs="auto" className="my-1">
      
                   
-                  <Button href={this.clickLink} variant="outline-dark">
+                  <Button href={this.filename} size="lg" variant="outline-dark">
                     Download your Admit Card <Badge variant="secondary">PDF</Badge>
                   </Button>
                
     </Col>
     : <> </>      
 }
-
+</Form.Row>
+</Form>
+<hr />
 <hr />
 <br />
 <br />
