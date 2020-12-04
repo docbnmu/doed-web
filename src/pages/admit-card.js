@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import {Badge, Image, Card, Col, Form, Button, InputGroup, FormControl} from "react-bootstrap"
+import {Alert, Badge, Image, Card, Col, Form, Button, InputGroup, FormControl} from "react-bootstrap"
 export default class AdmitCard extends React.Component {
 
   constructor(props) {
@@ -8,7 +8,7 @@ export default class AdmitCard extends React.Component {
     this.state = {
       formAlp: '',
       formNo: '',
-      submitClicked: false
+      showDownloading: false
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -27,7 +27,7 @@ export default class AdmitCard extends React.Component {
 
   downloadFile = function(e) {
     e.preventDefault();
-    this.setState({ submitClicked : true});
+    this.setState({ showDownloading : true});
     const filename = Buffer.from(this.state.formAlp + this.state.formNo).toString('base64');
     var xhr = new XMLHttpRequest();
        
@@ -42,19 +42,27 @@ export default class AdmitCard extends React.Component {
             alert('Candidate not found.\n' +
                  'अभ्यर्थी नहीं मिला।\n' +
                 'Contact department office or collect your admit card there itself.' +
-                '\nविभाग के कार्यालय से संपर्क करें या अपना एडमिट कार्ड वहीं से प्राप्त करें।'); // e.g. 404: Not Found
+                '\nविभाग के कार्यालय से संपर्क करें या अपना एडमिट कार्ड वहीं से प्राप्त करें।'); 
+                
           } else {
             const fileURL = URL.createObjectURL(new Blob([xhr.response], { type: 'application/pdf' }));
+            
             const link = document.createElement('a');
               link.href = fileURL;
               link.setAttribute('download', 'MET2020.Admit.Card.BNMU.pdf');
-               document.body.appendChild(link);
-               const clickLink = link.click();
+              document.body.appendChild(link);
+              link.click();
+              function openWindowFile() {
+                window.location.replace(fileURL, "_blank");
+                      
+              };
             //window.location.replace(fileURL, "_blank");
         }
+        
       };
 
         xhr.send();
+        
   };
 
 render() {
@@ -137,21 +145,29 @@ render() {
     <Col xs="auto" className="my-1">
       <Button size="lg" variant="dark" type="reset">Reset</Button>
     </Col>
-
+    </Form.Row>
+</Form>
+    <br />
 {
-        this.state.submitClicked?
-    <Col xs="auto" className="my-1">
-     
-                  
-                  <Button href={this.filename} size="lg" variant="outline-dark">
-                    Download your Admit Card <Badge variant="secondary">PDF</Badge>
-                  </Button>
+        this.state.showDownloading?
+  
+
+  <Alert variant="success">
+  <Alert.Heading>Downloading...</Alert.Heading>
+  <p>
+  MET 2020 Admit Card for {this.state.formAlp} - {this.state.formNo} <br /> 
+  </p>
+  <hr />
+  <p className="mb-0">
+  <Alert.Link href="../documents/MEd/MET2020-Instructions.pdf">
+    Instructions for candidates <Badge variant="secondary">PDF</Badge></Alert.Link>
+  </p>
+</Alert>
                
-    </Col>
+ 
     : <> </>      
 }
-</Form.Row>
-</Form>
+
 <hr />
 
 <br />
