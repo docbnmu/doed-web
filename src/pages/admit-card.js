@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import {Badge, Image, Card, Col, Form, Button, InputGroup, FormControl} from "react-bootstrap"
 export default class AdmitCard extends React.Component {
@@ -67,7 +67,7 @@ render() {
     <Card.Title></Card.Title>
     <Card.Text>
       उम्मीदवार अपना एडमिट कार्ड डाउनलोड करने के लिए अपना फॉर्म नंबर दर्ज कर सकते हैं (उदाहरण A-000) या उम्मीदवार अपना एडमिट कार्ड शिक्षाशास्त्र विभाग, भूपेंद्र नारायण मंडल विश्वविद्यालय से प्राप्त कर सकते हैं |
-      <hr />
+      <br />
       Candidates may enter their form number to download the admit card (example A-000) or they can get their admit card from the Education Department, B. N. Mandal University.
     </Card.Text>
     <Button href="../documents/MEd/MET2020-Instructions.pdf" variant="outline-dark">
@@ -83,7 +83,7 @@ render() {
 </Card>
 <hr />
 
-<h3>अपना फॉर्म नंबर यहां डालें | Enter your form number here:</h3> 
+<h4>अपना फॉर्म नंबर यहां डालें | Enter your form number here:</h4> 
 <br />
 <Form>
   <Form.Row className="justify-content-md-center">
@@ -91,7 +91,11 @@ render() {
   <InputGroup.Prepend>
     <InputGroup.Text>Full name</InputGroup.Text>
   </InputGroup.Prepend>
-  <FormControl />
+  <FormControl 
+  type="text"
+  style={{textTransform: 'uppercase'}}
+  placeholder="BHUPENDRA NARAYAN MANDAL"
+  />
 </InputGroup>
     <Col sm={4} className="my-1" >
     <InputGroup size="lg">
@@ -101,7 +105,7 @@ render() {
       <Form.Control
     type="text"
     maxLength={1}
-    style={{textTransform: 'capitalize'}}
+    style={{textTransform: 'uppercase'}}
     id="form-alp1"
     placeholder="X"
     name="formAlp"
@@ -109,10 +113,10 @@ render() {
     value={this.state.formAlp}
     onChange={this.handleInputChange}
   />
-        <InputGroup.Prepend>
-          <InputGroup.Text><b>-</b></InputGroup.Text>
-        </InputGroup.Prepend>
-        <FormControl 
+      <InputGroup.Prepend>
+      <InputGroup.Text><b>-</b></InputGroup.Text>
+      </InputGroup.Prepend>
+      <FormControl 
       required
       id="form-no1" 
       placeholder="000"
@@ -149,7 +153,7 @@ render() {
 </Form.Row>
 </Form>
 <hr />
-<hr />
+
 <br />
 <br />
 </Layout>
