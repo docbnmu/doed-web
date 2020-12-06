@@ -32,7 +32,7 @@ export default class AdmitCard extends React.Component {
     this.setState({ showDownloading : true});
     const filename = Buffer.from(this.state.formAlp.toUpperCase() + this.state.formNo).toString('base64');
     var xhr = new XMLHttpRequest();
-       var filename1 = this.state.formAlp.toUpperCase() + "/" + this.state.formAlp.toUpperCase() + this.state.formNo
+       var filename1 = this.state.formAlp.toUpperCase() + "/" + this.state.formAlp.toUpperCase() + "-" + this.state.formNo
         var URLToPDF = "https://download.doedbnmu.in/Master/" + filename1 + ".jpg.pdf";
         
         xhr.open("GET", URLToPDF, true);
@@ -163,11 +163,16 @@ render() {
   <p>
   MET 2020 Admit Card for {this.state.formAlp.toUpperCase()} - {this.state.formNo} <br /> 
   </p>
-  <hr />
-  <p className="mb-0">
-  <Alert.Link href="../documents/MEd/MET2020-Instructions.pdf">
-    Instructions for candidates <Badge variant="secondary">PDF</Badge></Alert.Link>
-  </p>
+  <br /> <p className="mb-0">Date of Examination: <b> 09-12-2020 (Wednesday) </b>Time: <b>12:00 PM to 02:00 PM</b><br />
+   Venue:<b> Examination Hall, B.N.M.U, North Campus (New Campus), B. N. Mandal University, Madhepura</b></p>
+  <hr /><p className="mb-1">
+  <Button href="../documents/MEd/MET2020-Instructions.pdf" variant="dark">
+    Instructions for candidates <Badge variant="secondary">PDF</Badge>
+    </Button> <br /><br />
+    <Button href="../documents/MEd/met-exam-notice.pdf" variant="dark">
+    Examination Notice <Badge variant="secondary">PDF</Badge>
+    </Button>
+    </p>
 </Alert>
                
  
