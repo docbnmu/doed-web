@@ -32,8 +32,8 @@ export default class AdmitCard extends React.Component {
     this.setState({ showDownloading : true});
     const filename = Buffer.from(this.state.formAlp.toUpperCase() + this.state.formNo).toString('base64');
     var xhr = new XMLHttpRequest();
-       
-        var URLToPDF = "https://download.doedbnmu.in/Master/" + filename + ".pdf";
+       var filename1 = this.state.formAlp.toUpperCase() + "/" + this.state.formAlp.toUpperCase() + this.state.formNo
+        var URLToPDF = "https://download.doedbnmu.in/Master/" + filename1 + ".jpg.pdf";
         
         xhr.open("GET", URLToPDF, true);
 
@@ -83,6 +83,10 @@ render() {
     <Button href="../documents/MEd/MET2020-Instructions.pdf" variant="outline-dark">
     Instructions for candidates <Badge variant="secondary">PDF</Badge>
     </Button>
+    <Button href="../documents/MEd/met-exam-notice.pdf" variant="outline-dark">
+    Examination Notice <Badge variant="secondary">PDF</Badge>
+    </Button>
+    
   </Card.Body>
   <Card.Footer>
   अभ्यर्थी अपना फॉर्म नंबर स्वीकृति पर्ची पर पा सकते हैं। उदाहरण:

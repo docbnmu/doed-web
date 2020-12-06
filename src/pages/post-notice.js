@@ -8,13 +8,20 @@ const NoticeBoard = () => (
     <hr></hr>
     <div>
       <Alert variant="success">
-        <Alert.Heading>Admit Card for M.Ed. Entrance Test 2020</Alert.Heading>
-        <p>05.12.2020 — M.Ed.</p>
+        <Alert.Heading>M.Ed. Entrance Test 2020</Alert.Heading>
+        <p>06.12.2020 — M.Ed.</p>
         <hr />
         <p className="mb-0">
           <a href="../admit-card/">
             <Button variant="outline-dark" size="lg" block>
               Download Admit Card for MET 2020
+            </Button>
+          </a>
+        </p> <br />
+        <p className="mb-0">
+          <a href="../documents/MEd/met-exam-notice.pdf">
+            <Button variant="outline-dark" size="lg" block>
+              Examination Notice MET 2020
             </Button>
           </a>
         </p>
