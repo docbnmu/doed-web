@@ -159,7 +159,7 @@ render() {
   
 
   <Alert variant="success">
-  <Alert.Heading>Downloading...</Alert.Heading>
+  <Alert.Heading>Downloading...Please wait.</Alert.Heading>
   <p>
   MET 2020 Admit Card for {this.state.formAlp.toUpperCase()} - {this.state.formNo} <br /> 
   </p>
@@ -171,7 +171,12 @@ render() {
     </Button> <br /><br />
     <Button href="../documents/MEd/met-exam-notice.pdf" variant="dark">
     Examination Notice <Badge variant="secondary">PDF</Badge>
-    </Button>
+    </Button><br />
+    Important: <br />
+    - The candidate must carry identity card (Voter ID / Aadhaar) at entrance examination centre.
+    <br />
+    No candidate is allowed to carry Calculator / Slide Rule / Log Table / Graph Paper / Charts or any
+electronic gadget e.g.. Mobile Phone etc. inside the Examination Hall.
     </p>
 </Alert>
                
