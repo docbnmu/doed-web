@@ -22,7 +22,7 @@
     "react-dom": "latest",
     "react-helmet": "latest",
     "react-image-lightbox": "latest",
-    "sass": "^1.29.0"
+    "sass": "latest"
   },
   "devDependencies": {
     "gatsby-plugin-offline": "latest",
@@ -34,7 +34,7 @@
   ],
   "license": "Custom",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "gatsby build --log-pages",
     "build:serve": "gatsby clean && gatsby build && gatsby serve",
     "build:path": "gatsby build --prefix-paths",
     "dev": "gatsby develop -H 0.0.0.0 -p 8000",
