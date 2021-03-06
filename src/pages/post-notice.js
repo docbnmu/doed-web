@@ -14,7 +14,7 @@ const NoticeBoard = () => (
         <p className="mb-0">
           <a href="../documents/Notice-Appearing-MarkSheet-MET-2020.pdf">
             <Button variant="outline-dark" size="lg" block>
-            Last date for marks-sheet submission of B.Ed./D.El.Ed for canditates appearing for MET 2020
+            Last date for marks-sheet submission of B.Ed./D.El.Ed for candidates appearing for MET 2020
             </Button>
           </a>
         </p>
