@@ -7,6 +7,22 @@ const NoticeBoard = () => (
     <h1>Notice.</h1>
     <hr></hr>
     <div>
+      <Alert variant="primary">
+        <Alert.Heading> Important Notice for canditates appearing for MET 2020</Alert.Heading>
+        <p>06.03.2021 — M.Ed.</p>
+        <hr />
+        <p className="mb-0">
+          <a href="../documents/Notice-Appearing-MarkSheet-MET-2020.pdf">
+            <Button variant="outline-dark" size="lg" block>
+            Last date for marks-sheet submission of B.Ed./D.El.Ed for canditates appearing for MET 2020
+            </Button>
+          </a>
+        </p>
+      </Alert>
+    </div>
+    <hr></hr>
+    <br></br>
+    <div>
       <Alert variant="success">
         <Alert.Heading>M.Ed. Entrance Test 2020</Alert.Heading>
         <p>06.12.2020 — M.Ed.</p>
