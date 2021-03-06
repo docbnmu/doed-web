@@ -11,7 +11,6 @@ const ImgC = "https://ik.imagekit.io/85x/https://doedbnmu.in/images/gallery/IMG-
 const IndexPage = () => (
   <Layout pageInfo={{ pageName: "Home" }}>
     <SEO title="Home" keywords={[`doedbnmu`, `bnmu`, `madhepura`]} />
-    <Marquee />
     <Container>
       <Carousel>
         <Carousel.Item>
